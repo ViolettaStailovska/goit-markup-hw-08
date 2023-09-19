@@ -1,0 +1,221 @@
+/*основной цвет фона #FFFFFF
+дополнительный цвет фона
+цвет фона героя  #2F303A
+основной цвет текста #757575
+дополнительный цвет текста*(заголовки) #212121
+цвет текста лого #000000
+цвет акцента #2196F3
+цвет контактов в футере #FFFFFF, 60%
+
+:root {
+    --logo-color: #000000;
+    --primary-text-color: #212121;
+    --second-text-color: #757575;
+    --accent-text-color: #2196f3;
+    --no-accent-text-color: #ffffff;
+    --second-bcg-text-color: #2f303a;
+    --second-bcg-color: #f5f4fa;
+    --footer-contact:rgba(255, 255, 255, 0.60);
+}
+
+/*  #212121 - цвет основного текста*/
+/*  #757575 - вторичный цвет*/
+/*  #2196F3 - цвет синий текста*/
+/*  #FFFFFF - цвет белый текста*/
+/*  #2F303A - цвет фона вторичный*/
+/* rgba(255, 255, 255, 0.60) - цвет контактов в футере*/
+
+
+
+/**/
+/*Общие*/
+:root {
+    --logo-color: #000000;
+    --primary-text-color: #212121;
+    --second-text-color: #757575;
+    --accent-text-color: #2196f3;
+    --no-accent-text-color: #ffffff;
+    --second-bcg-text-color: #2f303a;
+    --second-bcg-color: #f5f4fa;
+    --footer-contact: rgba(255, 255, 255, 0.60);
+}
+body{
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.2;
+    background-color: var(--no-accent-text-color);
+    color: var(--second-text-color);
+}
+
+ul {
+    list-style: none;
+}
+/* Лого*/
+.webstudio, .studio-footer, .web-footer  {
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.78px;
+}
+.web, .web-footer {
+    color: var(--accent-text-color);
+}
+.studio {
+    color: var(--logo-color);
+}
+/* Хедер-Студия-Портфолио-Контакты*/
+ul.contact, ul.contact-second {
+font-weight: 500;
+letter-spacing: 0.28px;
+}
+a.contact-first {
+color: var(--primary-text-color);
+}
+a.contact-first:hover, a.contact-first:focus {
+    color: var(--accent-text-color);
+}
+.contact-first.current {
+    color: var(--accent-text-color);
+}
+/* Хедер почта-телефон*/
+a.contact-second {
+    color: var(--second-text-color);
+}
+a.contact-second:hover, 
+a.contact-second:focus {
+    color: var(--accent-text-color);
+}
+
+/* Секция Герой*/
+.first-section {
+    background-color: var(--second-bcg-text-color);
+}
+h1 {
+    text-align: center;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 2.64px;
+    text-transform: uppercase;
+    color: var(--no-accent-text-color);
+}
+button.order {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.96px;
+    color: var(--no-accent-text-color);
+    background-color: var(--accent-text-color);
+    cursor: pointer;
+}
+/* Секция Преимущества*/
+h3.advantages {
+   font-weight: 700;
+   letter-spacing: 0.42px;
+   text-transform: uppercase;
+   color: var(--primary-text-color);
+}
+p.advantages {
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+    color: var(--second-text-color);
+}
+
+/* Секция Чем занимаемся*/
+h2.activity, h2.personal {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1.08px;
+    color: var(--primary-text-color);
+}
+/* Секция Команда*/
+section.personal {
+    background-color:var(--second-bcg-color);
+}
+h3.personal {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+    color: var(--primary-text-color);
+}
+p.personal {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.48px;
+    color: var(--second-text-color);
+}
+div.personal-first, 
+div.personal-second,
+div.personal-third,
+div.personal-fourth {
+    background-color: var(--no-accent-text-color);
+    width: 270px;
+}
+/* Футер-Лого-Адрес-Контакты*/
+footer {
+    background-color: var(--second-bcg-text-color);
+}
+/* .web-footer {
+    
+}
+*/
+
+.studio-footer {
+    color: var(--no-accent-text-color);
+}
+.address, a.contact-third {
+    
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+    color: var(--no-accent-text-color);
+}
+a.contact-third {
+    color: var(--footer-contact);
+}
+a.contact-third:hover,
+a.contact-third:focus {
+    color: var(--accent-text-color);
+}
+
+/* Секция кнопок портфолио*/
+button.portfolio{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.63;
+    letter-spacing: 0.48px;
+    color: var(--primary-text-color);
+    background-color: var(--second-bcg-color);
+    cursor: pointer;
+}
+button.portfolio:hover,
+button.portfolio:focus {
+    background-color: var(--accent-text-color);
+    color: var(--no-accent-text-color);
+}
+
+/* Секция примеров работ в портфолио*/
+h2.portfolio-filter {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2.0;
+    letter-spacing: 1.08px;
+    color: var(--primary-text-color);
+}
+p.portfolio-filter {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.88;
+    letter-spacing: 0.48px;
+    color: var(--second-text-color);
+}
+
+ 
