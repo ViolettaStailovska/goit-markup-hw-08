@@ -8,84 +8,94 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <!--Хедер-Лого-->
-        <a href=" " lang="en" class="webstudio">
-            <span class="web">Web</span><span class="studio">Studio</span></a>
-        <!--Хедер-Студия-Портфолио-Контакты-->
-        <nav>
-            <ul class="contact">
-                <li>
-                    <a href="./index.html" class="contact-first current">Студия</a>
-                </li>
-                <li>
-                    <a href="./portfolio.html" class="contact-first">Портфолио</a>
-                </li>
-                <li>
-                    <a href="" class="contact-first">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-        <!--Хедер почта-телефон-->
-        <ul class="contact-second">
-            <li>
-                <a href="mailto:info@devstudio.com" class="contact-second">info@devstudio.com</a>
-            </li>
-            <li>
-                <a href="tel:+380961111111" class="contact-second">+38 096 111 11 11</a>
-            </li>
-        </ul>
+        <div class="container">
+<!--Хедер-Лого-->
+<a href=" " lang="en" class="webstudio">
+    <span class="web">Web</span><span class="studio">Studio</span></a>
+<!--Хедер-Студия-Портфолио-Контакты-->
+<nav>
+    <ul class="contact">
+        <li>
+            <a href="./index.html" class="contact-first current">Студия</a>
+        </li>
+        <li>
+            <a href="./portfolio.html" class="contact-first">Портфолио</a>
+        </li>
+        <li>
+            <a href="" class="contact-first">Контакты</a>
+        </li>
+    </ul>
+</nav>
+<!--Хедер почта-телефон-->
+<ul class="contact-second">
+    <li>
+        <a href="mailto:info@devstudio.com" class="contact-second">info@devstudio.com</a>
+    </li>
+    <li>
+        <a href="tel:+380961111111" class="contact-second">+38 096 111 11 11</a>
+    </li>
+</ul>
+        </div>
     </header>
     <main>
         <!--Секция Герой-->
-        <section class="first-section">
-            <h1>Эффективные решения для вашего бизнеса</h1>
+        <section class="first section">
+            <div class="container">
+                <h1 class="hero">Эффективные решения <br> для вашего бизнеса</h1>
             <button type="button" class="order">Заказать услугу</button>
+            </div>
         </section>
         <!--Секция Преимущества-->
-        <section>
-            <h2>Наши преимущества</h2>
-            <ul>
-                <li>
+        <section class="section advantages">
+            <div class="container">
+                <h2 class="visually-hidden">Наши преимущества</h2>
+            <ul class="advantages">
+                <li class="advantages">
                     <h3 class="advantages">Внимание к деталям</h3>
                     <p class="advantages">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                 </li>
-                <li>
+                <li class="advantages">
                     <h3 class="advantages">Пунктуальность</h3>
                     <p class="advantages">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                 </li>
-                <li>
+                <li class="advantages">
                     <h3 class="advantages">Планирование</h3>
                     <p class="advantages">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                 </li>
-                <li>
+                <li class="advantages">
                     <h3 class="advantages">Современные технологии</h3>
                     <p class="advantages">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                 </li>
-            </ul>
+            </ul> 
+            </div>
         </section>
             <!--Секция Чем занимаемся-->
-        <section>
-            <h2 class="activity">Чем мы занимаемся</h2>
-            <ul>
-                <li>
+        <section class="section">
+            <div class="container">
+               <h2 class="activity">Чем мы занимаемся</h2>
+            <ul class="activity">
+                <li class="activity">
                     <img src="./images/activity1.jpeg" alt="примеры услуг1" width="370">
                 </li>
-                <li>
+                <li class="activity">
                     <img src="./images/activity2.jpeg" alt="примеры услуг2" width="370">
                 </li>
-                <li>
+                <li class="activity">
                     <img src="./images/activity3.jpeg" alt="примеры услуг3" width="370">
                 </li>
-            </ul>
+            </ul> 
+            </div>
         </section>
             <!--Секция Команда-->
-        <section class="personal">
-            <h2 class="personal">Наша команда</h2>
-            <ul>
+        <section class="personal section">
+            <div class="container">
+                <h2 class="personal">Наша команда</h2>
+            <ul class="personal">
                 <li>
                     <div class="personal-first">
                         <img src="./images/person1.jpeg" alt="персона1" width="270">
@@ -115,16 +125,18 @@
                     </div>
                 </li>
             </ul>
+            </div>
         </section>
     </main>
     <footer>
-            <!--Футер-Лого-Адрес-Контакты-->
+        <div class="container">
+             <!--Футер-Лого-Адрес-Контакты-->
         <a href=" " lang="en">
             <span class="web-footer">Web</span><span class="studio-footer">Studio</span>
         </a>
         <address>
             <p class="address">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul>
+            <ul class="address">
                 <li>
                     <a href="mailto:info@example.com" class="contact-third">info@example.com</a>
                 </li>
@@ -133,6 +145,7 @@
                 </li>
             </ul>
         </address>
+        </div>
     </footer>
 </body>
 </html>

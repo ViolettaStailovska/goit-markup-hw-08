@@ -38,6 +38,7 @@
     --second-bcg-text-color: #2f303a;
     --second-bcg-color: #f5f4fa;
     --footer-contact: rgba(255, 255, 255, 0.60);
+    --border-header-color:#ECECEC;
 }
 body{
     font-family: Roboto, sans-serif;
@@ -48,8 +49,40 @@ body{
     color: var(--second-text-color);
 }
 
-ul {
+h1,h2,h3,h4,p,ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
+}
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+    text-decoration: none;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 /* Лого*/
 .webstudio, .studio-footer, .web-footer  {
@@ -66,10 +99,36 @@ ul {
     color: var(--logo-color);
 }
 /* Хедер-Студия-Портфолио-Контакты*/
+header {
+    border-bottom: 1px solid var(--border-header-color);
+  }
+header div.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 ul.contact, ul.contact-second {
+    
 font-weight: 500;
 letter-spacing: 0.28px;
 }
+
+
+ul.contact :not(:last-child), 
+ul.contact-second :not(:last-child) {
+    margin-right: 50px;
+}
+ul.contact {
+    display: flex;
+    margin-left: 93px;
+    padding: 32px 0;
+}
+ul.contact-second {
+    display: flex;
+    margin-left: auto;
+}
+
 a.contact-first {
 color: var(--primary-text-color);
 }
@@ -89,8 +148,9 @@ a.contact-second:focus {
 }
 
 /* Секция Герой*/
-.first-section {
+.first.section {
     background-color: var(--second-bcg-text-color);
+    padding-bottom: 200px;
 }
 h1 {
     text-align: center;
@@ -101,7 +161,18 @@ h1 {
     text-transform: uppercase;
     color: var(--no-accent-text-color);
 }
+h1.hero {
+    max-width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
 button.order {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding: 10px 32px;
     text-align: center;
     font-size: 16px;
     font-weight: 700;
@@ -110,11 +181,27 @@ button.order {
     color: var(--no-accent-text-color);
     background-color: var(--accent-text-color);
     cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
 }
 /* Секция Преимущества*/
+.section.advantages {
+    padding-bottom: 0;
+}
+ul.advantages{
+    display: flex;
+}
+li.advantages {
+    width: 270px;
+}
+ul.advantages :not(:last-child){
+            margin-right: 30px;
+}
 h3.advantages {
    font-weight: 700;
-   letter-spacing: 0.42px;
+   letter-spacing: 0.28px;
    text-transform: uppercase;
    color: var(--primary-text-color);
 }
@@ -127,17 +214,36 @@ p.advantages {
 
 /* Секция Чем занимаемся*/
 h2.activity, h2.personal {
+    margin-bottom: 50px;
     text-align: center;
     font-size: 36px;
     font-weight: 700;
     letter-spacing: 1.08px;
     color: var(--primary-text-color);
 }
+ul.activity {
+    display: flex;
+}
+ul.activity :not(:last-child) {
+    margin-right: 30px;
+
+}
 /* Секция Команда*/
 section.personal {
     background-color:var(--second-bcg-color);
 }
+ul.personal {
+    display: flex;
+}
+/* ul.personal :not(:last-child) {
+    margin-right: 30px;
+}*/
+
+
 h3.personal {
+   
+    padding-top: 30px;
+    
     text-align: center;
     font-size: 16px;
     font-weight: 500;
@@ -145,6 +251,8 @@ h3.personal {
     color: var(--primary-text-color);
 }
 p.personal {
+    padding-top: 10px;
+    padding-bottom: 30px;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
@@ -157,10 +265,15 @@ div.personal-third,
 div.personal-fourth {
     background-color: var(--no-accent-text-color);
     width: 270px;
+    margin-right: 30px;
+}
+div.personal-fourth {
+    margin-right: 0;
 }
 /* Футер-Лого-Адрес-Контакты*/
 footer {
     background-color: var(--second-bcg-text-color);
+    padding: 60px 0 60px 0px;
 }
 /* .web-footer {
     
@@ -177,6 +290,16 @@ footer {
     letter-spacing: 0.42px;
     color: var(--no-accent-text-color);
 }
+address {
+    padding-top: 20px;
+    font-style: normal;
+}
+p.address {
+    padding-bottom: 9px;
+}
+ul.address :not(:last-child) {
+    padding-bottom: 9px;
+}
 a.contact-third {
     color: var(--footer-contact);
 }
@@ -186,7 +309,18 @@ a.contact-third:focus {
 }
 
 /* Секция кнопок портфолио*/
+ul.button-list{
+    display: flex;
+    justify-content: center;
+    margin-top: 94px;
+    margin-bottom: 50px;
+}
+ul.button-list :not(:last-child){
+    margin-right: 8px;
+
+}
 button.portfolio{
+    padding: 6px 22px;
     text-align: center;
     font-size: 16px;
     font-weight: 500;
@@ -195,7 +329,10 @@ button.portfolio{
     color: var(--primary-text-color);
     background-color: var(--second-bcg-color);
     cursor: pointer;
+    border-radius: 4px;
+    border: 0px;
 }
+
 button.portfolio:hover,
 button.portfolio:focus {
     background-color: var(--accent-text-color);
@@ -203,6 +340,21 @@ button.portfolio:focus {
 }
 
 /* Секция примеров работ в портфолио*/
+
+ul.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+    margin-bottom: 94px;
+}
+.portfolio > .portfolio-item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+    border: 1px solid #EEE;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 h2.portfolio-filter {
     font-size: 18px;
     font-weight: 700;
@@ -217,5 +369,7 @@ p.portfolio-filter {
     letter-spacing: 0.48px;
     color: var(--second-text-color);
 }
-
+div.portfolio-content {
+    padding: 20px 24px;
+}
  
