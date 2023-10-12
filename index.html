@@ -33,18 +33,29 @@
 </nav>
 <!--Хедер почта-телефон-->
 <ul class="contact-second">
-    <li>
-        <a href="mailto:info@devstudio.com" class="contact-second">info@devstudio.com</a>
+    <li class="contact-second">
+      <a href="mailto:info@devstudio.com" class="contact-second mail"
+        >
+        <svg class="contacts mail">
+          <use href="./images/svg/icons.svg#icon-mail"></use>
+        </svg>
+        info@devstudio.com</a
+      >
     </li>
-    <li>
-        <a href="tel:+380961111111" class="contact-second">+38 096 111 11 11</a>
+    <li class="contact-second tel">
+      <a href="tel:+380961111111" class="contact-second phone ">
+        <svg class="contacts phone">
+            <use href="./images/svg/icons.svg#icon-smartphone" ></use>
+        </svg>
+        +38 096 111 11 11</a
+      >
     </li>
-</ul>
+  </ul>
         </div>
     </header>
     <main>
         <!--Секция Герой-->
-        <section class="first section">
+        <section class="hero section">
             <div class="container">
                 <h1 class="hero">Эффективные решения <br> для вашего бизнеса</h1>
             <button type="button" class="order">Заказать услугу</button>
@@ -56,18 +67,30 @@
                 <h2 class="visually-hidden">Наши преимущества</h2>
             <ul class="advantages">
                 <li class="advantages">
-                    <h3 class="advantages">Внимание к деталям</h3>
-                    <p class="advantages">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
+                        <svg>
+                            <use href = "images/svg/icons.svg#icon-group1" width=270px height=120px></use>
+                        </svg>
+                        <h3 class="advantages"> Внимание к деталям</h3>
+                        <p class="advantages">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>                  
                 </li>
                 <li class="advantages">
+                    <svg>
+                        <use href = "images/svg/icons.svg#icon-group2" width=270px height=120px></use>
+                    </svg>
                     <h3 class="advantages">Пунктуальность</h3>
                     <p class="advantages">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                 </li>
                 <li class="advantages">
+                    <svg>
+                        <use href = "images/svg/icons.svg#icon-group3" width=270px height=120px></use>
+                    </svg>
                     <h3 class="advantages">Планирование</h3>
                     <p class="advantages">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                 </li>
                 <li class="advantages">
+                    <svg>
+                        <use href = "images/svg/icons.svg#icon-group4" width=270px height=120px></use>
+                    </svg>
                     <h3 class="advantages">Современные технологии</h3>
                     <p class="advantages">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                 </li>
@@ -101,13 +124,73 @@
                         <img src="./images/person1.jpeg" alt="персона1" width="270">
                         <h3 class="personal">Игорь Демьяненко</h3>
                         <p class="personal">Product Designer</p>
+                        <ul class="icons">
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </li>
-                <li>
+                <li>     
                     <div class="personal-second">
                         <img src="./images/person2.jpeg" alt="персона2" width="270">
                         <h3 class="personal">Ольга Репина</h3>
                         <p class="personal">Frontend Developer</p>
+                        <ul class="icons">
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </li>
                 <li>
@@ -115,6 +198,36 @@
                         <img src="./images/person3.jpeg" alt="персона3" width="270">
                         <h3 class="personal">Николай Тарасов</h3>
                         <p class="personal">Marketing</p>
+                        <ul class="icons">
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </li>
                 <li>
@@ -122,16 +235,97 @@
                         <img src="./images/person4.jpeg" alt="персона4" width="270">
                         <h3 class="personal">Михаил Ермаков</h3>
                         <p class="personal">UI Designer</p>
+                        <ul class="icons">
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="net">
+                                <a href="#" class="net">
+                                    <svg class="networks" width=20px height=20px>
+                                        <use href = "images/svg/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </li>
             </ul>
             </div>
         </section>
+        <!--Секция Клиенты-->
+        <section class="section">
+            <div class="container">
+                <h2 class="customers">Постоянные клиенты</h2>
+                <ul class="customers">
+                    <li class="customers">
+                        <a href="#" class="customers-link">
+                           <svg class="customers-icon">
+                            <use href="./images/svg/icons.svg#icon-client1"  ></use>
+                        </svg> 
+                        </a>
+                    </li>
+                    <li class="customers">
+                        <a href="#" class="customers-link">
+                            <svg class="customers-icon">
+                            <use href="./images/svg/icons.svg#icon-client2"></use>
+                        </svg> 
+                        </a>
+                    </li>
+                    <li class="customers">
+                        <a href="#" class="customers-link">
+                            <svg class="customers-icon">
+                            <use href="./images/svg/icons.svg#icon-client3"></use>
+                        </svg> 
+                        </a>
+                    </li>
+                    <li class="customers">
+                        <a href="#" class="customers-link">
+                            <svg class="customers-icon">
+                            <use href="./images/svg/icons.svg#icon-client4"></use>
+                        </svg> 
+                        </a>
+                    </li>
+                    <li class="customers">
+                        <a href="#" class="customers-link">
+                            <svg class="customers-icon">
+                            <use href="./images/svg/icons.svg#icon-client5"></use>
+                        </svg> 
+                        </a>
+                    </li>
+                    <li class="customers">
+                        <a href="#" class="customers-link">
+                            <svg class="customers-icon">
+                            <use href="./images/svg/icons.svg#icon-client6"></use>
+                        </svg> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
     <footer>
-        <div class="container">
+        <div class="container footer">
              <!--Футер-Лого-Адрес-Контакты-->
-        <a href=" " lang="en">
+             <div class="address">
+               <a href=" " lang="en">
             <span class="web-footer">Web</span><span class="studio-footer">Studio</span>
         </a>
         <address>
@@ -144,7 +338,43 @@
                     <a href="tel:+380991111111" class="contact-third">+38 099 111 11 11</a>
                 </li>
             </ul>
-        </address>
+        </address> 
+             </div>
+             <div class="join">
+                <h3 class="join">присоединяйтесь</h3>
+                <ul class="join">
+                    <li class="join">
+                        <a href="#" class="join">
+                            <svg class="join" width = 20px height = 20px>
+                                <use href="./images/svg/icons.svg#icon-instagram" ></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="join">
+                        <a href="#" class="join">
+                            <svg class="join" width = 20px height = 20px>
+                                <use href="./images/svg/icons.svg#icon-twitter" ></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="join">
+                        <a href="#" class="join">
+                            <svg class="join" width = 20px height = 20px>
+                                <use href="./images/svg/icons.svg#icon-facebook" ></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="join">
+                        <a href="#" class="join">
+                            <svg class="join" width = 20px height = 20px>
+                                <use href="./images/svg/icons.svg#icon-linkedin" ></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+             </div>
+        
+
         </div>
     </footer>
 </body>
