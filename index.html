@@ -58,7 +58,7 @@
         <section class="hero section">
             <div class="container">
                 <h1 class="hero">Эффективные решения <br> для вашего бизнеса</h1>
-            <button type="button" class="order">Заказать услугу</button>
+            <button  type="button" class="order" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <!--Секция Преимущества-->
@@ -103,13 +103,29 @@
                <h2 class="activity">Чем мы занимаемся</h2>
             <ul class="activity">
                 <li class="activity">
-                    <img src="./images/activity1.jpeg" alt="примеры услуг1" width="370">
+                    <div class="presentation-thumb">
+                       <img src="./images/activity1.jpeg" alt="примеры услуг1" width="370"> 
+                    <div class="presentation-overlay">
+                        <p class="presentation-name">Десктопные приложения</p>
+                    </div>
+                </div>
+                    
                 </li>
                 <li class="activity">
+                    <div class="presentation-thumb">
                     <img src="./images/activity2.jpeg" alt="примеры услуг2" width="370">
+                    <div class="presentation-overlay">
+                        <p class="presentation-name">Мобильные приложения</p>
+                    </div>
+                </div>
                 </li>
                 <li class="activity">
+                    <div class="presentation-thumb">
                     <img src="./images/activity3.jpeg" alt="примеры услуг3" width="370">
+                    <div class="presentation-overlay">
+                        <p class="presentation-name">Дизайнерские решения</p>
+                    </div>
+                </div>
                 </li>
             </ul> 
             </div>
@@ -377,5 +393,17 @@
 
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="icon-close" data-modal-close>
+            <svg  class="icon-close" width=11px height=11px >
+              <use href="./images/icons.svg#closebutton"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <script src="./modal.js"></script>
+     
+
 </body>
 </html>
