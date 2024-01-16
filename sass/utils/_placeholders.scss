@@ -1,0 +1,130 @@
+%logo{
+    font-family: $fonts-logo;
+    font-weight: 700;
+    letter-spacing: $letter-spacing-main;
+    font-size: 26px;
+    line-height: normal;
+    text-decoration: none;
+}
+%hero_tit {
+    text-align: center;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 2.64px;
+    text-transform: uppercase;
+}
+%hero_button {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: $letter-spacing-caption;
+}
+%h3_tit {
+    font-weight: 700;
+    letter-spacing: $letter-spacing-contact;
+    text-transform: uppercase;
+}
+%p_advantages {
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: $letter-spacing-contact;
+}
+%presentation_name {
+    font-weight: 700;
+    line-height: 1.19;
+    text-transform: uppercase;
+}
+%personal__name{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+}
+%personal__profession{
+    font-family: $fonts-main; 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: $letter-spacing-main;
+}
+%address {
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: $letter-spacing-contact;
+}
+%button__subscribe {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: $letter-spacing-caption;
+}
+%button__portfolio {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.63;
+    letter-spacing: $letter-spacing-portfolio;
+}
+%portfolio_card-name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2.0;
+    letter-spacing: 1.08px;
+}
+%portfolio_card-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.88;
+    letter-spacing: 0.48px;
+}
+%portfolio_overlay {
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: $letter-spacing-portfolio;
+}
+%form-textarea {
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.12px;
+}
+%modal-title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.6px;
+}
+%placeholder {
+    font-family: inherit;
+    font-weight:400;
+    font-size:14px;
+    line-height:1.17;
+    letter-spacing: 0.01;
+}
+%contract-text {
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    letter-spacing: 0.42px;
+}
+%contract-link {
+    font-family: inherit;
+    font-weight: 400;
+    font-size:14px;
+    line-height:1.71;
+    letter-spacing: 0.03em;
+    text-decoration: underline;
+}
+%modal-button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height:1.88;
+    letter-spacing:0.06em;
+    font-family: Roboto;
+    border: none;
+}

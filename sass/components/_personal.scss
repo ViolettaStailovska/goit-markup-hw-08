@@ -1,0 +1,73 @@
+section.personal {
+    background-color: $color-second-bcg-color;
+}
+ul.personal {
+    display: flex;
+}
+h3.personal {
+    text-align: center;
+    @extend %personal__name;
+    color: $color-primary-text-color;
+    padding-top: 30px;
+}
+p.personal {
+    padding-top: 10px;
+    padding-bottom: 16px;
+    @extend %personal__profession;
+    color: $color-second-text-color;
+}
+div.personal-first, 
+div.personal-second,
+div.personal-third,
+div.personal-fourth {
+    background-color: $color-no-accent-text-color;
+    text-align: center;
+    width: 270px;
+    margin-right: 30px;
+    padding-bottom: 30px;
+}
+div.personal-fourth {
+    margin-right: 0px;
+}
+ul.icons{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-no-accent-text-color;
+  }
+  a.net {
+    width: 44px;
+    height: 44px;
+    background-color:$color-no-accent-text-color;
+    border-color: $color-no-accent-text-color;
+    padding:0px;
+    border-width: 0px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+    transform: scale(1);
+    transition: transform $transition;
+  }
+  a.net:not(:last-child) { 
+     margin-right: 10px;}
+
+  svg.networks{
+    
+    fill:$color-fill;
+  }
+  .net:not(:last-child){
+    margin-right: 10px;
+  }
+  .net {
+    &:hover {
+    background-color:$color-accent-text-color;
+    border-radius: 50%;
+    border: none;
+    transform: scale(1.1);
+    .networks{
+      fill:$color-no-accent-text-color;
+    }
+    }
+  }
+  

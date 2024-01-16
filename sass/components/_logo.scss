@@ -1,0 +1,12 @@
+.webstudio, .studio-footer, .web-footer  {
+    @extend %logo;
+}
+.web, .web-footer {
+    color: $color-accent-text-color;
+}
+.studio {
+    color:  $color-logo;
+}
+.studio-footer {
+    color: $color-no-accent-text-color;
+}

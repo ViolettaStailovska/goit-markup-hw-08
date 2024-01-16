@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">    
-    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+    <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
     <header>
@@ -19,32 +20,32 @@
     <span class="web">Web</span><span class="studio">Studio</span></a>
 <!--Хедер-Студия-Портфолио-Контакты-->
 <nav>
-    <ul class="contact">
+    <ul class="nav">
         <li>
-            <a href="./index.html" class="contact-first ">Студия</a>
+            <a href="./index.html" class="nav__link ">Студия</a>
         </li>
         <li>
-            <a href="./portfolio.html" class="contact-first current">Портфолио</a>
+            <a href="./portfolio.html" class="nav__link current">Портфолио</a>
         </li>
         <li>
-            <a href="" class="contact-first">Контакты</a>
+            <a href="" class="nav__link">Контакты</a>
         </li>
     </ul>
 </nav>
 <!--Хедер почта-телефон-->
-<ul class="contact-second">
-    <li class="contact-second">
-      <a href="mailto:info@devstudio.com" class="contact-second mail"
+<ul class="contact">
+    <li class="contact__list">
+      <a href="mailto:info@devstudio.com" class="contact__link mail"
         >
-        <svg class="contacts mail">
+        <svg class="contact__svg mail">
           <use href="./images/svg/icons.svg#icon-mail"></use>
         </svg>
         info@devstudio.com</a
       >
     </li>
-    <li class="contact-second tel">
-      <a href="tel:+380961111111" class="contact-second phone ">
-        <svg class="contacts phone">
+    <li class="contact__link tel">
+      <a href="tel:+380961111111" class="contact__link phone ">
+        <svg class="contact__svg phone">
             <use href="./images/svg/icons.svg#icon-smartphone" ></use>
         </svg>
         +38 096 111 11 11</a
@@ -58,16 +59,16 @@
         <section>
             <div class="container">
             <h1 class="visually-hidden"> Портфолио работ </h1>
-            <ul class="button-list">
-                <li class="button-list-item">
+            <ul class="portfolio__list">
+                <li>
                     <button type="button" class="portfolio">Все</button></li>
-                <li class="button-list-item">
+                <li>
                     <button type="button" class="portfolio">Веб-сайты</button></li>
-                <li class="button-list-item">
+                <li>
                     <button type="button" class="portfolio">Приложения</button></li>
-                <li class="button-list-item">
+                <li>
                     <button type="button" class="portfolio">Дизайн</button></li>
-                <li class="button-list-item">
+                <li>
                     <button type="button" class="portfolio">Маркетинг</button></li>
             </ul>
         </div>
@@ -260,8 +261,20 @@
                     </li>
                 </ul>
              </div>
-        
-
+             <div class="subscribe">
+                 <h3 class="subscribe"> подпишитесь на рассылку </h3>
+                 <div class="form">
+                    <form name="subscribe_form" autocomplete="on" novalidate> 
+                         <input type="email" name="email" placeholder="E-mail" class="subscribe"/>
+                         <button type="submit" class="subscribe"> Подписаться 
+                            <svg class="plane" width = 24px height = 24px>
+                            <use href="./images/svg/modal-icons.svg#plane" ></use>
+                        </svg>
+                         </button>
+                         
+                     </form>
+                 </div>
+             </div>
         </div>
     </footer>
 </body>

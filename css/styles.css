@@ -29,7 +29,7 @@
 
 /**/
 /*Общие*/
-:root {
+/* :root {
     --logo-color: #000000;
     --primary-text-color: #212121;
     --second-text-color: #757575;
@@ -42,8 +42,8 @@
     --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     --button-change-color:#188ce8;
    --portfolio-item-gap: 30px;
-}
-body{
+} */
+/* body{
     font-family: Roboto, sans-serif;
     font-style: normal;
     font-size: 14px;
@@ -86,9 +86,9 @@ a {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-}
+} */
 /* Лого*/
-.webstudio, .studio-footer, .web-footer  {
+/* .webstudio, .studio-footer, .web-footer  {
     font-family: Raleway;
     font-size: 26px;
     font-weight: 700;
@@ -100,87 +100,86 @@ a {
 }
 .studio {
     color: var(--logo-color);
-}
+} */
 /* Хедер-Студия-Портфолио-Контакты*/
-header {
+/* header {
     border-bottom: 1px solid var(--border-header-color);
   }
 header div.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+} */
 
-ul.contact, ul.contact-second {
+/* ul.nav, ul.contact {
     
 font-weight: 500;
 letter-spacing: 0.28px;
-}
+} */
 
-
-ul.contact :not(:last-child), 
-ul.contact-second :not(:last-child) {
+/* ul.nav :not(:last-child), 
+ul.contact :not(:last-child) {
     margin-right: 50px;
-}
-ul.contact {
+} */
+/* ul.nav {
     display: flex;
     margin-left: 93px;
     padding: 32px 0;
 }
-ul.contact-second {
+ul.contact {
     display: flex;
     margin-left: auto;
 }
 
-a.contact-first {
+a.nav__link {
     position:relative;
 color: var(--primary-text-color);
 transform: scale(1);
 transition: transform var(--transition);
 }
-a.contact-first:hover, a.contact-first:focus {
+a.nav__link:hover, a.nav__link:focus {
     color: var(--accent-text-color);
     transform: scale(1.1);
 }
-.contact-first.current {
+.nav__link.current {
     color: var(--accent-text-color);
-}
+} */
 /* Хедер почта-телефон*/
-a.contact-second {
+/* a.contact__link {
     color: var(--second-text-color);
     transform: scale(1);
     transition: transform var(--transition);
 }
-a.contact-second:hover, 
-a.contact-second:focus {
+a.contact__link:hover, 
+a.contact__link:focus {
     color: var(--accent-text-color);
     transform: scale(1.1);
 }
-a.contact-second {
+a.contact__link {
     display: flex;
     align-items: center;
 }
-svg.contacts.mail {
+svg.contact__svg.mail {
     width: 16px;
     height: 12px;
     margin-right: 10px;
     fill: #757575;
 }
-.contact-second.mail:hover .contacts.mail,
-.contact-second.mail:focus .contacts.mail{
+.contact__link.mail:hover .contact__svg.mail,
+.contact__link.mail:focus .contact__svg.mail{
   fill: var(--accent-text-color);
   }
-  .contact-second.phone:hover .contacts.phone,
-.contact-second.phone:focus .contacts.phone{
+.contact__link.phone:hover .contact__svg.phone,
+.contact__link.phone:focus .contact__svg.phone{
   fill: var(--accent-text-color);
   }
-svg.contacts.phone {
+svg.contact__svg.phone {
     width: 10px;
     height: 16px;
     margin-right: 10px;
     fill: #757575;
-}
-a.contact-first.current::after {
+} */
+/* a.nav__link.current::after {
     position: absolute;
     content: '';
     display: block;
@@ -193,16 +192,16 @@ a.contact-first.current::after {
     transition: transform var(--transition);
    
 }
-a.contact-first.current:hover::after{
+a.nav__link.current:hover::after{
     transform:scale(1.2);
   }
-  a.contact-first.current:focus::after{
+  a.nav__link.current:focus::after{
     transform:scale(1.2);
-  }
+  } */
   
 
 /* Секция Герой*/
-.hero.section {
+/* .hero.section {
     background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),url(../images/hero.jpeg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -246,9 +245,9 @@ button.order {
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
-}
+} */
 /* Модальное окно*/
-.backdrop{
+/* .backdrop{
     position: fixed;
     top: 0;
     left: 0;
@@ -288,8 +287,8 @@ div.form-field {
     flex-direction: column;
     width: 448px;
     /* height: 40px; */
-}
-button.icon-close {
+/* } */ 
+/* button.icon-close {
    position: absolute;
     fill: var(--primary-text-color);
     padding: 5px;
@@ -300,14 +299,12 @@ button.icon-close {
     border-width: 1px;
     border-style: solid;
     background-color: var(--no-accent-text-color);
-    /* display: flex;
-    justify-content: center; */
     transform: scale(1);
     transition: transform var(--transition);
     width: 30px;
     height:30px; 
-}
-.form-input, .form-textarea {
+} */
+/* .form-input, .form-textarea {
     margin-top: 4px;
     width: 448px;
     height: 40px;
@@ -378,10 +375,9 @@ padding-top: 40px;
     margin-top:20px;
     display: inline-flex;
     align-items: center;
-  }
-  .label{
+  } */
+  /* .label{
     display: inline-flex;
-    /* justify-content: center; */
     align-items: center;
   }
 
@@ -404,7 +400,7 @@ padding-top: 40px;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 171.429% */
+    line-height: 24px; 
     letter-spacing: 0.42px;
     margin-left: 9px;
   }
@@ -456,12 +452,12 @@ a.contract-link{
   }
 .modal-button:hover,
   .modal-button:focus{
-    background-color: var(--button-change-color);}
+    background-color: var(--button-change-color);} */
 
   
 
 /* Секция Преимущества*/
-.section.advantages {
+/* .section.advantages {
     padding-bottom: 0;
 }
 ul.advantages{
@@ -469,7 +465,7 @@ ul.advantages{
 }
 li.advantages {
     width: 270px;
-}
+} */
 /*
 Advantages images using ::before
 
@@ -494,7 +490,7 @@ li.advantages:nth-child(4)::before {
 }
 */
 
-ul.advantages :not(:last-child){
+/* ul.advantages :not(:last-child){
             margin-right: 30px;
 }
 h3.advantages, h3.join,h3.subscribe {
@@ -512,10 +508,10 @@ p.advantages {
 }
 li.advantages {
     display: block;
-}
+} */
 
 /* Секция Чем занимаемся*/
-h2.activity, h2.personal, h2.customers {
+/* h2.activity, h2.personal, h2.customers {
     margin-bottom: 50px;
     text-align: center;
     font-size: 36px;
@@ -529,10 +525,10 @@ ul.activity {
 ul.activity :not(:last-child) {
     margin-right: 30px;
 }
-.presentation-thumb {
+.presentation__thumb {
 position: relative;
 }
-.presentation-overlay {
+.presentation__overlay {
     position: absolute;
     content: '';
     bottom:0;
@@ -543,20 +539,20 @@ position: relative;
     height: 70px;
     background-color: rgba(47, 48, 58, 0.80);
 }
-.presentation-name {
+.presentation__name {
     color: #FFF;
 font-weight: 700;
 line-height: 1.19;
 text-transform: uppercase;
-}
+} */
 
 /* Секция Команда*/
-section.personal {
+/* section.personal {
     background-color:var(--second-bcg-color);
 }
 ul.personal {
     display: flex;
-}
+} */
 /* li.personal:not(:last-child){
     margin-right: 30px;
     ul.personal:not(:last-child) {
@@ -566,7 +562,7 @@ ul.personal {
 
 
 
-h3.personal {
+/* h3.personal {
     text-align: center;
     font-size: 16px;
     font-weight: 500;
@@ -634,57 +630,50 @@ ul.icons{
   }
   .net:hover .networks{
     fill:#ffffff;
-  }
+  } */
   /* Клиенты*/
 
-  ul.customers {
+  /* ul.customers {
     display: flex;
   }
   ul.customers :not( :last-child) {
     margin-right: 30px;
   }
-  a.customers-link {
+  a.customers__link {
     display: flex;
     width: 170px;
     height: 92px;
     border-radius: 4px;
     border: 1px solid #AFB1B8;
   }
-  svg.customers-icon {
+  svg.customers__icon {
     fill:#AFB1B8;
     transition:  fill var(--transition);
   }
-  .customers-link:hover,
-  .customers-link:focus{ 
+  .customers__link:hover,
+  .customers__link:focus{ 
   border:0px solid var(--accent-text-color);
   border-radius: 4px;
   }
-  .customers-link :hover.customers-icon {
+  .customers__link :hover.customers-icon {
     fill:#2196f3;
     border: 1px solid #2196f3;
     border-radius: 4px;
     transform: scale(1.1);
     
-  }
+  } */
 /* Футер-Лого-Адрес-Контакты*/
-footer {
+/* footer {
     background-color: var(--second-bcg-text-color);
     padding: 60px 0 60px 0px;
 }
-/* .web-footer {
-    
-}
-*/
+
 .container.footer {
     display: flex;
     align-items: baseline;
 }
 div.address {
     margin-right: 70px;
-}
-
-.studio-footer {
-    color: var(--no-accent-text-color);
 }
 .address, a.contact-third {
     
@@ -791,16 +780,16 @@ a.join {
   .plane {
     position: absolute;
     right:28px;
-  }
+  } */
 
 /* Секция кнопок портфолио*/
-ul.button-list{
+/* ul.portfolio__list{
     display: flex;
     justify-content: center;
     margin-top: 94px;
     margin-bottom: 50px;
 }
-ul.button-list :not(:last-child){
+ul.portfolio__list :not(:last-child){
     margin-right: 8px;
 
 }
@@ -825,11 +814,11 @@ button.portfolio:focus {
     background-color: var(--accent-text-color);
     color: var(--no-accent-text-color);
     transform: scale(0.9);
-}
+} */
 
 /* Секция примеров работ в портфолио*/
 
-ul.portfolio {
+/* ul.portfolio {
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
@@ -892,4 +881,4 @@ div.portfolio-thumb {
         box-shadow: 0px 1px 1px rgba(0,0,0,0.12),
                     0px 4px 4px rgba(0,0,0,0.06),
                     1px 4px 6px rgba(0,0,0,0.16);
-        }
+        } */

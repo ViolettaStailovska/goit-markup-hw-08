@@ -1,0 +1,24 @@
+.section.advantages {
+    padding-bottom: 0;
+}
+ul.advantages{
+    display: flex;
+}
+li.advantages {
+    width: 270px;
+}
+ul.advantages :not(:last-child){
+    margin-right: 30px;
+}
+h3.advantages, h3.join,h3.subscribe {
+@extend %h3_tit;
+color: $color-primary-text-color;
+}
+p.advantages {
+@extend %p_advantages;
+color: $color-second-text-color;
+margin-top: 10px;
+}
+li.advantages {
+display: block;
+}
