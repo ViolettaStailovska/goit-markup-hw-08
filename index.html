@@ -14,10 +14,15 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container">         
 <!--Хедер-Лого-->
 <a href=" " lang="en" class="webstudio">
     <span class="web">Web</span><span class="studio">Studio</span></a>
+  <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="menu_open" width=40px height=40px>
+                    <use href = "./images/icons2401.svg#menu_40px" ></use>
+                </svg>
+            </button>  
 <!--Хедер-Студия-Портфолио-Контакты-->
 <nav>
     <ul class="nav">
@@ -58,7 +63,7 @@
         <!--Секция Герой-->
         <section class="hero section">
             <div class="container">
-                <h1 class="hero">Эффективные решения <br> для вашего бизнеса</h1>
+                <h1 class="hero__title">Эффективные решения <br> для вашего бизнеса</h1>
             <button  type="button" class="order" data-modal-open>Заказать услугу</button>
             </div>
         </section>
@@ -68,30 +73,38 @@
                 <h2 class="visually-hidden">Наши преимущества</h2>
             <ul class="advantages">
                 <li class="advantages">
-                        <svg>
-                            <use href = "images/svg/icons.svg#icon-group1" width=270px height=120px></use>
+                    <div class="advantages__box">
+                        <svg class="advantages__image">
+                            <use href = "./images/icons2401.svg#group01" ></use>
                         </svg>
+                    </div>
                         <h3 class="advantages"> Внимание к деталям</h3>
                         <p class="advantages">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>                  
                 </li>
                 <li class="advantages">
-                    <svg>
-                        <use href = "images/svg/icons.svg#icon-group2" width=270px height=120px></use>
-                    </svg>
+                    <div class="advantages__box">
+                        <svg class="advantages__image">
+                            <use href = "./images/icons2401.svg#group02" ></use>
+                        </svg>
+                    </div>
                     <h3 class="advantages">Пунктуальность</h3>
                     <p class="advantages">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                 </li>
                 <li class="advantages">
-                    <svg>
-                        <use href = "images/svg/icons.svg#icon-group3" width=270px height=120px></use>
-                    </svg>
+                    <div class="advantages__box">
+                        <svg class="advantages__image">
+                            <use href = "./images/icons2401.svg#group03" ></use>
+                        </svg>
+                    </div>
                     <h3 class="advantages">Планирование</h3>
                     <p class="advantages">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                 </li>
                 <li class="advantages">
-                    <svg>
-                        <use href = "images/svg/icons.svg#icon-group4" width=270px height=120px></use>
-                    </svg>
+                    <div class="advantages__box">
+                        <svg class="advantages__image">
+                            <use href = "./images/icons2401.svg#group04" ></use>
+                        </svg>
+                    </div>
                     <h3 class="advantages">Современные технологии</h3>
                     <p class="advantages">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                 </li>
@@ -99,13 +112,19 @@
             </div>
         </section>
             <!--Секция Чем занимаемся-->
-        <section class="section">
+        <section class="section activities">
             <div class="container">
                <h2 class="activity">Чем мы занимаемся</h2>
             <ul class="activity">
                 <li class="activity">
                     <div class="presentation__thumb">
-                       <img src="./images/activity1.jpeg" alt="примеры услуг1" width="370"> 
+                        <picture class="activity__image">
+                            <source srcset="./images/pictures/activity1.jpeg 1x, ./images/pictures/activity1@2x.jpeg 2x" media="(min-width:1200px)"/>
+                            <img srcset="./images/pictures/activity1.jpeg 1x, ./images/pictures/activity1@2x.jpeg 2x" src="./images/pictures/activity1.jpeg" alt="активность1"/>
+                           </picture> 
+                           <div></div>
+                           
+                       <!-- <img src="./images/activity1.jpeg" alt="примеры услуг1" width="370">  -->
                     <div class="presentation__overlay">
                         <p class="presentation__name">Десктопные приложения</p>
                     </div>
@@ -114,7 +133,11 @@
                 </li>
                 <li class="activity">
                     <div class="presentation__thumb">
-                    <img src="./images/activity2.jpeg" alt="примеры услуг2" width="370">
+                        <picture>
+                            <source srcset="./images/pictures/activity2.jpeg 1x, ./images/pictures/activity2@2x.jpeg 2x" media="(min-width:1200px)"/>
+                            <img srcset="./images/pictures/activity2.jpeg 1x, ./images/pictures/activity2@2x.jpeg 2x" src="./images/pictures/activity2.jpeg" alt="активность2"/>
+                          </picture>
+                    <!-- <img src="./images/activity2.jpeg" alt="примеры услуг2" width="370"> -->
                     <div class="presentation__overlay">
                         <p class="presentation__name">Мобильные приложения</p>
                     </div>
@@ -122,7 +145,11 @@
                 </li>
                 <li class="activity">
                     <div class="presentation__thumb">
-                    <img src="./images/activity3.jpeg" alt="примеры услуг3" width="370">
+                        <picture>
+                            <source srcset="./images/pictures/activity3.jpeg 1x, ./images/pictures/activity3@2x.jpeg 2x" media="(min-width:1200px)"/>
+                            <img srcset="./images/pictures/activity3.jpeg 1x, ./images/pictures/activity3@2x.jpeg 2x" src="./images/pictures/activity3.jpeg" alt="активность3"/>
+                          </picture>
+                    <!-- <img src="./images/activity3.jpeg" alt="примеры услуг3" width="370"> -->
                     <div class="presentation__overlay">
                         <p class="presentation__name">Дизайнерские решения</p>
                     </div>
@@ -136,9 +163,15 @@
             <div class="container">
                 <h2 class="personal">Наша команда</h2>
             <ul class="personal">
-                <li>
+                <li class="personal__list">
                     <div class="personal-first">
-                        <img src="./images/person1.jpeg" alt="персона1" width="270">
+                         <picture>
+                            <source srcset="./images/pictures/person1_desktop.jpeg 1x, ./images/pictures/person1_desktop@2x.jpeg 2x" media="(min-width:1200px)"/>
+                            <source srcset="./images/pictures/person1_tablet.jpeg 1x, ./images/pictures/person1_tablet@2x.jpeg 2x" media="(min-width:768px)"/>
+                            <source srcset="./images/pictures/person1_mobile.jpeg 1x, ./images/pictures/person1_mobile@2x.jpeg 2x" media="(max-width:767px)"/>
+                            <img srcset="./images/pictures/person1_mobile.jpeg 1x, ./images/pictures/person1_mobile@2x.jpeg 2x" src="./images/pictures/person1_mobile.jpeg" alt="персона1"/>
+                          </picture>
+                        
                         <h3 class="personal">Игорь Демьяненко</h3>
                         <p class="personal">Product Designer</p>
                         <ul class="icons">
@@ -173,9 +206,15 @@
                         </ul>
                     </div>
                 </li>
-                <li>     
+                <li class="personal__list">    
                     <div class="personal-second">
-                        <img src="./images/person2.jpeg" alt="персона2" width="270">
+                        <picture>
+                            <source srcset="./images/pictures/person2_desktop.jpeg 1x, ./images/pictures/person2_desktop@2x.jpeg 2x" media="(min-width:1200px)"/>
+                            <source srcset="./images/pictures/person2_tablet.jpeg 1x, ./images/pictures/person2_tablet@2x.jpeg 2x" media="(min-width:768px)"/>
+                            <source srcset="./images/pictures/person2_mobile.jpeg 1x, ./images/pictures/person2_mobile@2x.jpeg 2x" media="(max-width:767px)"/>
+                            <img srcset="./images/pictures/person2_mobile.jpeg 1x, ./images/pictures/person2_mobile@2x.jpeg 2x" src="./images/pictures/person2_mobile.jpeg" alt="персона2"/>
+                          </picture>
+                        <!-- <img src="./images/person2.jpeg" alt="персона2" width="270"> -->
                         <h3 class="personal">Ольга Репина</h3>
                         <p class="personal">Frontend Developer</p>
                         <ul class="icons">
@@ -210,9 +249,15 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="personal__list">
                     <div class="personal-third">
-                        <img src="./images/person3.jpeg" alt="персона3" width="270">
+                        <picture>
+                            <source srcset="./images/pictures/person3_desktop.jpeg 1x, ./images/pictures/person3_desktop@2x.jpeg 2x" media="(min-width:1200px)"/>
+                            <source srcset="./images/pictures/person3_tablet.jpeg 1x, ./images/pictures/person3_tablet@2x.jpeg 2x" media="(min-width:768px)"/>
+                            <source srcset="./images/pictures/person3_mobile.jpeg 1x, ./images/pictures/person3_mobile@2x.jpeg 2x" media="(max-width:767px)"/>
+                            <img srcset="./images/pictures/person3_mobile.jpeg 1x, ./images/pictures/person3_mobile@2x.jpeg 2x" src="./images/pictures/person3_mobile.jpeg" alt="персона3"/>
+                          </picture>
+                        <!-- <img src="./images/person3.jpeg" alt="персона3" width="270"> -->
                         <h3 class="personal">Николай Тарасов</h3>
                         <p class="personal">Marketing</p>
                         <ul class="icons">
@@ -247,9 +292,15 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="personal__list">
                     <div class="personal-fourth">
-                        <img src="./images/person4.jpeg" alt="персона4" width="270">
+                        <picture>
+                            <source srcset="./images/pictures/person4_desktop.jpeg 1x, ./images/pictures/person4_desktop@2x.jpeg 2x" media="(min-width:1200px)"/>
+                            <source srcset="./images/pictures/person4_tablet.jpeg 1x, ./images/pictures/person4_tablet@2x.jpeg 2x" media="(min-width:768px)"/>
+                            <source srcset="./images/pictures/person4_mobile.jpeg 1x, ./images/pictures/person4_mobile@2x.jpeg 2x" media="(max-width:767px)"/>
+                            <img srcset="./images/pictures/person4_mobile.jpeg 1x, ./images/pictures/person4_mobile@2x.jpeg 2x" src="./images/pictures/person4_mobile.jpeg" alt="персона4"/>
+                          </picture>
+                        <!-- <img src="./images/person4.jpeg" alt="персона4" width="270"> -->
                         <h3 class="personal">Михаил Ермаков</h3>
                         <p class="personal">UI Designer</p>
                         <ul class="icons">
@@ -292,42 +343,42 @@
             <div class="container">
                 <h2 class="customers">Постоянные клиенты</h2>
                 <ul class="customers">
-                    <li class="customers">
+                    <li class="customers__list">
                         <a href="#" class="customers__link">
                            <svg class="customers__icon">
                             <use href="./images/svg/icons.svg#icon-client1"  ></use>
                         </svg> 
                         </a>
                     </li>
-                    <li class="customers">
+                    <li class="customers__list">
                         <a href="#" class="customers__link">
                             <svg class="customers__icon">
                             <use href="./images/svg/icons.svg#icon-client2"></use>
                         </svg> 
                         </a>
                     </li>
-                    <li class="customers">
+                    <li class="customers__list">
                         <a href="#" class="customers__link">
                             <svg class="customers__icon">
                             <use href="./images/svg/icons.svg#icon-client3"></use>
                         </svg> 
                         </a>
                     </li>
-                    <li class="customers">
+                    <li class="customers__list">
                         <a href="#" class="customers__link">
                             <svg class="customers__icon">
                             <use href="./images/svg/icons.svg#icon-client4"></use>
                         </svg> 
                         </a>
                     </li>
-                    <li class="customers">
+                    <li class="customers__list">
                         <a href="#" class="customers__link">
                             <svg class="customers__icon">
                             <use href="./images/svg/icons.svg#icon-client5"></use>
                         </svg> 
                         </a>
                     </li>
-                    <li class="customers">
+                    <li class="customers__list">
                         <a href="#" class="customers__link">
                             <svg class="customers__icon">
                             <use href="./images/svg/icons.svg#icon-client6"></use>
@@ -342,7 +393,7 @@
         <div class="container footer">
              <!--Футер-Лого-Адрес-Контакты-->
              <div class="address">
-               <a href=" " lang="en">
+               <a href=" " lang="en" class="footer__logo">
             <span class="web-footer">Web</span><span class="studio-footer">Studio</span>
         </a>
         <address>
@@ -393,13 +444,18 @@
              <div class="subscribe">
                  <h3 class="subscribe"> подпишитесь на рассылку </h3>
                  <div class="form">
-                    <form name="subscribe_form" autocomplete="on" novalidate> 
-                         <input type="email" name="email" placeholder="E-mail" class="subscribe"/>
-                         <button type="submit" class="subscribe"> Подписаться 
+                    <form name="subscribe_form" autocomplete="on" novalidate class="subscribe__form"> 
+                        <div class="input__footer">
+                            <input type="email" name="email" placeholder="E-mail" class="subscribe"/>
+                        </div>
+                         <div class="button__footer">
+                            <button type="submit" class="subscribe"> Подписаться 
                             <svg class="plane" width = 24px height = 24px>
                             <use href="./images/svg/modal-icons.svg#plane" ></use>
                         </svg>
                          </button>
+                         </div>
+                         
                          
                      </form>
                  </div>
@@ -459,6 +515,58 @@
           </form>
         </div>
       </div>
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <div class="window__menu">
+          <button class="menu-toggle js-close-menu">
+            <svg  class="menu__close" width=40px height=40px >
+              <use href="./images/icons2401.svg#close_40px"></use>
+            </svg>
+          </button>
+          
+            
+          <ul class="window__item">
+            <li class="window__list">
+                <a href="./index.html" class="window__link current">Студия</a>
+            </li>
+            <li class="window__list">
+                <a href="./portfolio.html" class="window__link">Портфолио</a>
+            </li>
+            <li class="window__list">
+                <a href="" class="window__link">Контакты</a>
+            </li>
+          </ul>
+       <div class="mob-menu__bottom">
+        <ul class="window__contact">
+          <li class="window__contact-list">
+            <a href="tel:+380961111111" class="window__contact-link phone ">
+               +38 096 111 11 11</a>
+          </li>
+          <li class="window__contact-list">
+            <a href="mailto:info@devstudio.com" class="window__contact-link mail"
+              >
+               info@devstudio.com</a>
+          </li>
+        </ul>
+    <ul class="social-menu">
+      <li class="social-menu__list"><a href="" class="social-menu__link">Instagram</a></li>
+      <li class="social-menu__list"><a href="" class="social-menu__link">Twitter</a></li>
+      <li class="social-menu__list"><a href="" class="social-menu__link">Facebook</a></li>
+      <li class="social-menu__list"><a href="" class="social-menu__link">LinkedIn</a></li>
+    </ul>
+       </div>
+        </div>
+        
+     </div>
+  
+  
+      <script
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"
+      ></script>
+      <script defer src="mobile-menu.js"></script>
+
       <script src="./modal.js"></script>
      
 

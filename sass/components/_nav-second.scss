@@ -1,6 +1,11 @@
 ul.contact {
-    display: flex;
-    margin-left: auto;
+    @media screen and (max-width:767px) {
+        display: none;
+      }
+      @media screen and (min-width:1200px) {
+        display: flex;
+         margin-left: auto;
+      }
 }
 
 a.contact__link {
@@ -43,3 +48,16 @@ svg.contact__svg.phone {
     margin-right: 10px;
     fill: $color-second-text-color;
 }
+ul.contact :not(:last-child) {
+    @media screen and (min-width:768px){
+        margin-bottom: 10px;
+      }
+    @media screen and (min-width:1200px){
+      margin-right: 50px;
+    }
+    }
+    // ul.contact :last-child {
+    //     @media screen and (min-width:768px) and (max-width:1199px){
+    //         margin-bottom: 21px;
+    //       }
+    //     }

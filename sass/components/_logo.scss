@@ -1,5 +1,13 @@
 .webstudio, .studio-footer, .web-footer  {
-    @extend %logo;
+      @extend %logo;
+      @media screen and (min-width:768px){
+        padding-top: 26px;
+        padding-bottom: 26px;
+      }
+    @media screen and (min-width:1200px) {
+        font-size: 26px;
+        letter-spacing: 0.78px; 
+}
 }
 .web, .web-footer {
     color: $color-accent-text-color;

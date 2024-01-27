@@ -1,29 +1,67 @@
-.hero.section {
-    background-image: linear-gradient( to right, $color-gradient,$color-gradient),url(../images/hero.jpeg);
+.hero {
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     max-width:1600px;
     margin-right: auto;
     margin-left: auto;
     background-color: $color-second-bcg-text-color;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding: 118px 0;
+
+    @media screen and (max-width:767px) {
+        background-image: linear-gradient( to right, $color-gradient,$color-gradient),url(../images/pictures/hero_mobile.jpeg);
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient( to right, $color-gradient,$color-gradient),url(../images/pictures/hero_mobile@2x.jpeg);
+        max-width:480px;
+        
 }
-h1 {
+        }
+     @media screen and (min-width:768px) {
+        background-image: linear-gradient( to right, $color-gradient,$color-gradient),url(../images/pictures/hero_tablet.jpeg);
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient( to right, $color-gradient,$color-gradient),url(../images/pictures/hero_tablet@2x.jpeg);
+
+        }   
+        @media screen and (min-width:1200px) {
+            background-image: linear-gradient( to right, $color-gradient,$color-gradient),url(../images/pictures/hero_desktop.jpeg);
+            @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: linear-gradient( to right, $color-gradient,$color-gradient),url(../images/pictures/hero_desktop@2x.jpeg);
+            padding: 200px 0;
+            max-width:1600px;
+        }       
+    }
+    
+    
+}
+.hero__title {
     @extend %hero_tit;
     color: $color-no-accent-text-color;
-}
-h1.hero {
-    max-width: 696px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
+    @media screen and (min-width:1200px){
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 2.64px;
+    }
+}
+
+
 }
 button.order {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 32px;
+    padding: 10px 24px;
     text-align: center; 
     color: $color-no-accent-text-color;
     background-color: $color-accent-text-color;
@@ -38,5 +76,8 @@ button.order {
     }
     &:focus{
         background-color: $color-button-change-color;
+    }
+    @media screen and (min-width:1200px){
+        padding: 10px 32px;
     }
 }
