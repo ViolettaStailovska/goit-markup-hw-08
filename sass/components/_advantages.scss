@@ -17,9 +17,9 @@ ul.advantages{
 }
 li.advantages {
     @media screen and (max-width:767px){
-        // width: 450px;
-        // margin-right: auto;
-        // margin-left: auto;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
     }
     @media screen and (min-width: 768px) and (max-width:1199px){
         width: calc((100%  - 4*15px)/2);
@@ -31,19 +31,7 @@ li.advantages {
    
 }
 .advantages__box {
-    // @media screen and (max-width:767px){
     
-    // width: 100%;
-        
-    // }
-    // @media screen and (min-width:768px){
-    //     width: 100%;
-        
-    // }
-    // @media screen and (min-width:1200px) {
-    //     width: 100%;
-        
-    // }
     width: 100%;
     display: inline-flex;
     justify-content: center;

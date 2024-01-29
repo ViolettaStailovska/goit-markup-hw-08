@@ -2,7 +2,7 @@ section.personal {
     background-color: $color-second-bcg-color;
 }
 ul.personal {
-  @media screen and (max-width:1199px) {
+  @media screen and (min-width:768px) {
     padding:0px;
     display: flex;
     flex-wrap: wrap;

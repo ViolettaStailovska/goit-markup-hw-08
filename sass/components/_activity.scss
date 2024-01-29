@@ -19,18 +19,30 @@ h2.activity, h2.personal, h2.customers {
     letter-spacing: 1.08px;
     color: $color-primary-text-color;
 }
-ul.activity {
-    display: flex;
-    }
-ul.activity :not(:last-child) {
-    margin-right: 30px;
-}
-.presentation__thumb {
-position: relative;
 
-}
-.presentation__overlay {
-    display: flex;
+.activity{
+    @media screen and (min-width:1200px){
+      min-width: 376px;
+      display: flex;
+      justify-content:center ;
+    }
+  }
+  .activity__list:not(:last-child)
+  {
+    @media screen and (min-width:1200px){
+      margin-right: 30px;
+    }
+  }
+  .presentation{
+    @media screen and (min-width:1200px){
+      position: relative;
+    .presentation__image{
+    width: 370px;}
+    }
+  }
+  .overlay{
+    @media screen and (min-width:1200px){
+      display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -38,8 +50,12 @@ position: relative;
     width: 100%;
     height: 70px;
     background-color: $color-overlay-activity;
-}
-.presentation__name {
-    color: $color-no-accent-text-color;
+    }
+  }
+  .overlay__name{
     @extend %presentation_name;
-}
+    @media screen and (min-width:1200px){
+      color: $color-no-accent-text-color;
+    }
+    }
+    

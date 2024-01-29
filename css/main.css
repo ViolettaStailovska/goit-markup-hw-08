@@ -7,6 +7,10 @@ body {
   color: var(--second-text-color);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 h1, h2, h3, h4, p, ul {
   margin: 0;
   padding: 0;
@@ -109,7 +113,7 @@ p.advantages {
   letter-spacing: 0.02em;
 }
 
-.presentation__name {
+.overlay__name {
   font-weight: 700;
   line-height: 1.19;
   text-transform: uppercase;
@@ -483,7 +487,6 @@ svg.contact__svg.phone {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/pictures/hero_mobile@2x.jpeg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/pictures/hero_mobile@2x.jpeg);
-    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -581,6 +584,11 @@ button.order:focus {
   }
 }
 
+@media screen and (max-width: 767px) {
+  li.advantages:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   li.advantages {
     width: calc((100% - 60px) / 2);
@@ -680,46 +688,63 @@ h2.activity, h2.personal, h2.customers {
   }
 }
 
-ul.activity {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .activity {
+    min-width: 376px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
-ul.activity :not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .activity__list:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
-.presentation__thumb {
-  position: relative;
+@media screen and (min-width: 1200px) {
+  .presentation {
+    position: relative;
+  }
+  .presentation .presentation__image {
+    width: 370px;
+  }
 }
 
-.presentation__overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  background-color: rgba(47, 48, 58, 0.8);
+@media screen and (min-width: 1200px) {
+  .overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
 }
 
-.presentation__name {
-  color: #ffffff;
+@media screen and (min-width: 1200px) {
+  .overlay__name {
+    color: #ffffff;
+  }
 }
 
 section.personal {
   background-color: #f5f4fa;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   ul.personal {
     padding: 0px;
     display: -webkit-box;
@@ -1135,6 +1160,7 @@ a.join:hover svg.join {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1143,6 +1169,11 @@ a.join:hover svg.join {
   }
 }
 
+@media screen and (max-width: 767px) {
+  div.form {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 1200px) {
   div.form {
     margin-top: 20px;
@@ -1190,7 +1221,7 @@ h3.subscribe {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 450px;
+    width: 100%;
     margin-top: 20px;
   }
 }
@@ -1362,6 +1393,7 @@ button.portfolio:focus {
 
 @media screen and (max-width: 767px) {
   .portfolio > .portfolio-item {
+    width: 100%;
     margin-bottom: 30px;
   }
 }
@@ -1430,6 +1462,11 @@ div.portfolio-thumb {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 767px) {
+  .portfolio-overlay {
+    padding: 77px 24px;
+  }
+}
 
 .portfolio-link:hover .portfolio-overlay {
   -webkit-transform: translateY(-100%);
@@ -1452,34 +1489,55 @@ div.portfolio-thumb {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   background-color: #ffffff;
   border-radius: 4px;
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .modal {
     max-width: 100%;
     height: 609px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin-top: 93px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .modal {
+    max-width: 100%;
+    height: 609px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin-top: 200px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
     min-height: 581px;
     min-width: 528px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin-top: 221px;
   }
 }
 
@@ -1541,7 +1599,7 @@ button.icon-close {
 }
 @media screen and (max-width: 1199px) {
   .form-input, .form-textarea {
-    width: 370px;
+    min-width: 370px;
   }
 }
 @media screen and (min-height: 1200px) {
@@ -1937,8 +1995,8 @@ a.contract-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .social-menu__list:not(:last-child) {

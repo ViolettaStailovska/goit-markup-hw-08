@@ -182,7 +182,7 @@
 }
 .social-menu{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .social-menu__list{
   &:not(:last-child){

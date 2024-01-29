@@ -17,6 +17,7 @@ ul.portfolio {
 }
 .portfolio > .portfolio-item {
     @media screen and (max-width:767px){
+        width: 100%;
         margin-bottom: 30px;
     }
     @media screen and (min-width:768px){
@@ -55,6 +56,9 @@ div.portfolio-thumb {
     overflow: hidden;
 }    
       .portfolio-overlay{
+        @media screen and (max-width:767px) {
+            padding: 77px 24px;
+        }
         display: flex;
         justify-content: center;
         position: absolute;

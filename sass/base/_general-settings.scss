@@ -6,7 +6,9 @@ body{
     background-color: var(--no-accent-text-color);
     color: var(--second-text-color);
 }
-
+body.modal-open {
+    overflow: hidden;
+}
 h1,h2,h3,h4,p,ul {
     margin: 0;
     padding: 0;
