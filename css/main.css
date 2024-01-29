@@ -173,7 +173,7 @@ p.portfolio-filter {
   letter-spacing: 0.03em;
 }
 
-.form-textarea {
+.form__textarea, .contract__text, .form__label {
   font-family: Roboto;
   font-size: 12px;
   font-style: normal;
@@ -182,7 +182,7 @@ p.portfolio-filter {
   letter-spacing: 0.12px;
 }
 
-.modal-title {
+.modal-data {
   font-family: Roboto;
   font-size: 20px;
   font-style: normal;
@@ -231,7 +231,7 @@ p.portfolio-filter {
   letter-spacing: 0.01;
 }
 
-.contract-text {
+.contract__link {
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -240,16 +240,7 @@ p.portfolio-filter {
   letter-spacing: 0.42px;
 }
 
-a.contract-link {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  text-decoration: underline;
-}
-
-.modal-button {
+.contract__button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -1322,20 +1313,13 @@ button.subscribe {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .portfolio__item:nth-child(4) {
-    margin-top: 15px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .portfolio__item:nth-child(5) {
-    margin-top: 15px;
-  }
-}
-
-ul.portfolio__list :not(:last-child) {
+.portfolio__item:not(:last-child) {
   margin-right: 8px;
+}
+@media screen and (max-width: 767px) {
+  .portfolio__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 button.portfolio {
@@ -1489,7 +1473,9 @@ div.portfolio-thumb {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  overflow-y: scroll;
+  opacity: 1;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -1500,78 +1486,36 @@ div.portfolio-thumb {
 
 .modal {
   background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   border-radius: 4px;
-  -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .modal {
     max-width: 100%;
     height: 609px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    margin-top: 93px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .modal {
-    max-width: 100%;
-    height: 609px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    margin-top: 200px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    min-height: 581px;
-    min-width: 528px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    margin-top: 221px;
-  }
-}
-
-div.form-field {
-  margin-left: 41px;
-  margin-right: 39px;
-  margin-top: 10px;
-}
-@media screen and (min-height: 1200px) {
-  div.form-field {
-    width: 448px;
-  }
-}
-
-.form-label {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-@media screen and (min-height: 1200px) {
-  .form-label {
-    width: 448px;
+    width: 528px;
+    height: 581px;
   }
 }
 
 button.icon-close {
   position: absolute;
   fill: #212121;
-  padding: 5px;
+  padding: 9px;
   top: 8px;
   right: 8px;
   border-radius: 50%;
@@ -1579,66 +1523,108 @@ button.icon-close {
   border-width: 1px;
   border-style: solid;
   background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 30px;
-  height: 30px;
 }
-
-.form-input, .form-textarea {
-  margin-top: 4px;
-  height: 40px;
-  padding-left: 42px;
-  border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  outline: none;
-}
-@media screen and (max-width: 1199px) {
-  .form-input, .form-textarea {
-    min-width: 370px;
-  }
-}
-@media screen and (min-height: 1200px) {
-  .form-input, .form-textarea {
-    width: 448px;
-  }
-}
-
-.form-textarea {
-  height: 120px;
-  resize: none;
-  padding-top: 12px;
-  padding-left: 16px;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-svg.form-icon {
-  position: absolute;
-  top: 32px;
-  left: 14px;
-}
-
 button.icon-close:hover {
   fill: #2196f3;
   border-color: #2196f3;
 }
 
-.modal-title {
-  color: #212121;
-  text-align: center;
+.modal-data {
+  margin-top: 40px;
+  margin-left: 41px;
+}
+
+.form__field {
+  margin-top: 10px;
+  margin-left: 41px;
+  margin-right: 40px;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form__field:not(:first-child) {
+  margin-top: 10px;
+}
+.form__field:focus-within .form__input {
+  border-color: #2196f3;
+}
+.form__field:focus-within .form__icon {
+  fill: #2196f3;
+}
+.form__field:focus-within .form__textarea {
+  border-color: #2196f3;
+}
+
+.form__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  color: rgb(117, 117, 117);
+  font-size: 12px;
+}
+
+.contract__text {
+  color: rgb(117, 117, 117);
+  font-size: 12px;
+  margin-left: 9px;
+}
+
+.form__input {
+  margin-top: 4px;
+  padding-left: 42px;
+  padding-right: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  position: relative;
+  outline: none;
 }
 @media screen and (max-width: 1199px) {
-  .modal-title {
-    padding: 40px 40px 12px 40px;
+  .form__input {
+    max-width: 370px;
+    height: 40px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .modal-title {
-    padding-top: 40px;
+  .form__input {
+    width: 448px;
+    height: 40px;
+  }
+}
+
+.form__textarea {
+  margin-top: 4px;
+  padding: 12px 16px;
+  resize: none;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  font-family: inherit;
+  outline: none;
+  color: #212121;
+}
+@media screen and (max-width: 1199px) {
+  .form__textarea {
+    max-width: 370px;
+    height: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form__textarea {
+    width: 448px;
+    height: 120px;
   }
 }
 
@@ -1646,50 +1632,52 @@ button.icon-close:hover {
   margin-left: 16px;
   margin-top: 12px;
   color: rgba(117, 117, 117, 0.5);
+  font-family: inherit;
+  line-height: 1.17;
 }
 
 ::-moz-placeholder {
   margin-left: 16px;
   margin-top: 12px;
   color: rgba(117, 117, 117, 0.5);
+  font-family: inherit;
+  line-height: 1.17;
 }
 
 :-ms-input-placeholder {
   margin-left: 16px;
   margin-top: 12px;
   color: rgba(117, 117, 117, 0.5);
+  font-family: inherit;
+  line-height: 1.17;
 }
 
 ::-ms-input-placeholder {
   margin-left: 16px;
   margin-top: 12px;
   color: rgba(117, 117, 117, 0.5);
+  font-family: inherit;
+  line-height: 1.17;
 }
 
 ::placeholder {
   margin-left: 16px;
   margin-top: 12px;
   color: rgba(117, 117, 117, 0.5);
+  font-family: inherit;
+  line-height: 1.17;
 }
 
-.form-field:focus-visible .form-input {
-  border-color: #2196f3;
-}
-
-.form-field:focus-within .form-input {
-  border-color: #2196f3;
-}
-.form-field:focus-within .form-icon {
-  fill: #2196f3;
-}
-.form-field:focus-within .form-textarea {
-  border-color: #2196f3;
+.form__icon {
+  position: absolute;
+  top: 32px;
+  left: 14px;
+  fill: #212121;
 }
 
 .contract {
   margin-top: 20px;
-  margin-left: 40px;
-  margin-right: auto;
+  margin-left: 54px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1698,16 +1686,19 @@ button.icon-close:hover {
           align-items: center;
 }
 
-.label {
+.contract__label {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.contract-checkbox {
+.contract__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1720,20 +1711,14 @@ button.icon-close:hover {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.contract-text {
-  color: #757575;
-  margin-left: 9px;
-}
-@media screen and (max-width: 1199px) {
-  .contract-text {
-    font-size: 12px;
-    line-height: normal;
-    letter-spacing: 0.42px;
-  }
+.contract__checkbox:checked + .contract__icon {
+  background-image: url(../images/ok-square.svg);
+  border: none;
+  background-origin: border-box;
+  background-size: contain;
 }
 
-.checkbox-icon {
+.contract__icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1748,34 +1733,18 @@ button.icon-close:hover {
   border: 2px solid #212121;
 }
 
-.contract-checkbox:checked + .checkbox-icon {
-  background-image: url(../images/ok-square.svg);
-  border: none;
-  background-origin: border-box;
-  background-size: contain;
-}
-
-a.contract-link {
+.contract__link {
+  font-family: inherit;
+  text-decoration: underline;
   color: #2196f3;
 }
-@media screen and (max-width: 1199px) {
-  a.contract-link {
-    font-size: 12px;
-    line-height: normal;
-    letter-spacing: 0.42px;
-  }
-}
 
-.modal-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 200px;
+.contract__button {
+  max-width: 200px;
   height: 50px;
   background-color: #2196f3;
   color: #ffffff;
-  margin: 30px auto 40px auto;
-  padding: 10px 52px 10px 52px;
+  padding: 10px 55px 10px 56px;
   border: none;
   border-radius: 4px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -1783,12 +1752,42 @@ a.contract-link {
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal-button:hover {
+@media screen and (max-width: 1199px) {
+  .contract__button {
+    margin: 31px 125px auto 125px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contract__button {
+    margin: 30px 164px 40px 164px;
+  }
+}
+.contract__button:hover, .contract__button:focus {
   background-color: #188ce8;
 }
-.modal-button:focus {
-  background-color: #188ce8;
+
+.button__modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+svg.form-icon {
+  position: absolute;
+  top: 32px;
+  left: 14px;
 }
 
 .menu {

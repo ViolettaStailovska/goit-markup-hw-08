@@ -20,17 +20,20 @@ ul.portfolio__list{
     }
     
 }
-.portfolio__item:nth-child(4)  {
-    @media screen and (max-width:767px){
-        margin-top: 15px;
+// .portfolio__item:nth-child(4)  {
+//     @media screen and (max-width:767px){
+//         margin-top: 15px;
+//     }
+// }
+// .portfolio__item:nth-child(5)  {
+//     @media screen and (max-width:767px){
+        
+//     }
+// }
+.portfolio__item:not(:last-child){
+    @media screen and (max-width:767px) {
+        margin-bottom: 15px;
     }
-}
-.portfolio__item:nth-child(5)  {
-    @media screen and (max-width:767px){
-        margin-top: 15px;
-    }
-}
-ul.portfolio__list :not(:last-child){
     margin-right: 8px;
 }
 button.portfolio{

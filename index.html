@@ -461,6 +461,66 @@
         <div class="modal">
           <button class="icon-close" data-modal-close>
             <svg  class="icon-x" width="18px" height="18px">
+                <use href="./images/svg/modal-icons.svg#icon-close1" ></use>
+              </svg>
+          </button>
+          <h3 class="modal-data">Оставьте свои данные, мы вам перезвоним</h3>
+          <form class="form__modal">
+            <div class="form__field">
+              <label class="form__label">
+                Имя
+              <input type="text" class="form__input" name="name" id="name" placeholder=" ">
+              <svg  class="form-icon" width="18px" height="18px">
+                <use href="./images/svg/modal-icons.svg#modal-person" ></use>
+              </svg>
+              
+              </label>
+            </div>
+  
+            <div class="form__field">
+              <label class="form__label">
+                Телефон 
+                <input type="text" class="form__input" name="tel" id="tel" placeholder=" ">
+                <svg  class="form-icon" width="18px" height="18px">
+                    <use href="./images/svg/modal-icons.svg#modal-tel" ></use>
+                  </svg>
+              </label>
+            </div>
+  
+            <div class="form__field">
+              <label class="form__label">
+                Почта
+                <input type="text" class="form__input" name="mail" id="mail" placeholder=" ">
+                <svg  class="form-icon" width="18px" height="18px">
+                    <use href="./images/svg/modal-icons.svg#modal-mail" ></use>
+                  </svg>
+              </label>
+            </div>
+              
+           <div class="form__field">
+              <label class="form__label">Комментарий
+                <textarea name="textarea"  placeholder=" Введите текст" class="form__textarea"></textarea>
+              </label>
+            </div>
+          
+            <div class="contract">
+             <label class="contract__label">
+              <input type="checkbox" class="contract__checkbox" name="checkbox">
+              <span class="contract__icon"> </span>
+                <span class="contract__text">Соглашаюсь с рассылкой и принимаю <a href="#" class="contract__link"> Условия договора</a></span>
+              </label>
+            </div>
+            <div class="button__modal">
+              <button type="submit" class="contract__button"> Отправить </button>
+            </div>
+               
+            </form>
+            </div>      
+        </div>
+    <!-- <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="icon-close" data-modal-close>
+            <svg  class="icon-x" width="18px" height="18px">
               <use href="./images/svg/modal-icons.svg#icon-close1" ></use>
             </svg>
           </button>
@@ -509,7 +569,7 @@
                <button type="submit" class="modal-button"> Отправить </button>
           </form>
         </div>
-      </div>
+      </div> -->
       <div class="menu-container js-menu-container" id="mobile-menu">
         <div class="window__menu">
           <button class="menu-toggle js-close-menu">
